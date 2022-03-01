@@ -4,7 +4,7 @@
 
 # XDE
 .expo/
-
+.idea
 # VSCode
 .vscode/
 jsconfig.json

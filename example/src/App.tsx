@@ -1,12 +1,16 @@
 import * as React from 'react';
 
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { ScalePressView } from 'react-native-scale-press';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ScalePressViewManager color="#32a852" style={styles.box} />
+      <ScalePressView onPress={() => {
+        console.log('[App.press]', )
+      }} style={styles.box}>
+        <Text>Press</Text>
+      </ScalePressView>
     </View>
   );
 }
@@ -21,5 +25,11 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     marginVertical: 20,
+    backgroundColor: 'red',
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: 'green',
+    borderWidth: 2,
   },
 });
